@@ -1,18 +1,18 @@
 :root {
+/*-------VARIABLES-------*/
   --bg: #fff;
   --text: #000;
   --drop-shadow: #000;
+/*--------STYLING--------*/
+  background: var(--bg);
+  color: var(--text);
 }
 
+/*-----VARIABLES-FOR-DARK-MODE-----*/
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #3d3d3d;
     --text: #fff;
     --drop-shadow: #157c00;
   }
-}
-
-#root {
-  background: var(--bg);
-  color: var(--text);
 }

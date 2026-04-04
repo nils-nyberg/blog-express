@@ -6,6 +6,7 @@ import Auth from "./routes/Auth";
 import Chat from "./routes/Chat";
 import Profile from "./routes/Profile";
 import Layout from "./Layout";
+import "./styles/main.css";
 
 const root = document.getElementById("root");
 
