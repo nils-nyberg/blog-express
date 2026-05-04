@@ -1,0 +1,53 @@
+.view {
+  display: flex;
+
+  h2 {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    width: 50%;
+    height: 70px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0 10rem 0; /* Temporary styling fix: Horizontal padding */
+  background-color: #d9d9d9;
+  font-size: 1.5rem;
+  
+  label {
+    display: block;
+    font-weight: 500;
+  }
+
+  &__text-input {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 270px;
+    box-shadow: -4px 4px 4px 0 rgb(0, 0, 0, 0.25);
+  }
+
+  &__submit {
+    background-color: #38ce1a;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 153px;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+
+    &:hover {
+      border: 5px solid #38aa1a;
+    }
+  }
+}
