@@ -1,3 +1,9 @@
+.auth-section {
+  height: calc(100vh - var(--header-height-mobile));
+  display: flex;
+  flex-direction: column;
+}
+
 .view {
   display: flex;
 
@@ -5,7 +11,6 @@
     display: inherit;
     align-items: center;
     justify-content: center;
-    background-color: #d9d9d9;
     width: 50%;
     height: 70px;
   }
@@ -13,9 +18,10 @@
 
 .form {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0 10rem 0; /* Temporary styling fix: Horizontal padding */
+  padding-top: 2rem;
   background-color: #d9d9d9;
   font-size: 1.5rem;
   
