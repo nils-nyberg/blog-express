@@ -31,7 +31,7 @@
 
 @media (width >= 1400px) {
   .header {
-    height: 115px;
+    height: var(--header-height-desktop);
 
     &__logo {
       width: 90px;
