@@ -11,7 +11,7 @@
   /*-------VARIABLES-------*/
   --bg: #fff;
   --text: #000;
-  --drop-shadow: 0 4px 10px 0 rgb(0, 0, 0, 0.25);
+  --header-drop-shadow: 0 4px 10px 0 rgb(0, 0, 0, 0.25);
   --header-height-mobile: 85px;
   /*--------STYLING--------*/
   background: var(--bg);
@@ -23,7 +23,7 @@
   :root {
     --bg: #3d3d3d;
     --text: #fff;
-    --drop-shadow: 0 4px 10px 0 rgb(21, 124, 0, 0.5);
+    --header-drop-shadow: 0 4px 10px 0 rgb(21, 124, 0, 0.5);
   }
 }
 .header {
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   height: var(--header-height-mobile);
-  box-shadow: var(--drop-shadow);
+  box-shadow: var(--header-drop-shadow);
 }
 .header__logo {
   width: 70px;
