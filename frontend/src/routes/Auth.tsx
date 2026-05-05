@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 function Auth() {
-  const [isLogin, setIsLogin] = useState(true);
-  const [loginColor, setLoginColor] = useState("#d9d9d9");
-  const [registerColor, setRegisterColor] = useState("#b7b7b7");
+  const [view, setView] = useState<"login" | "register">("login");
+  const [loginColor, setLoginColor] = useState<string>("#d9d9d9");
+  const [registerColor, setRegisterColor] = useState<string>("#b7b7b7");
 
   return (
     <>
@@ -14,7 +14,7 @@ function Auth() {
               className="view__login"
               style={{ backgroundColor: loginColor }}
               onClick={() => {
-                setIsLogin(true);
+                setView("login");
                 setLoginColor("#d9d9d9");
                 setRegisterColor("#b7b7b7");
               }}
@@ -25,7 +25,7 @@ function Auth() {
               className="view__register"
               style={{ backgroundColor: registerColor }}
               onClick={() => {
-                setIsLogin(false);
+                setView("register");
                 setLoginColor("#b7b7b7");
                 setRegisterColor("#d9d9d9");
               }}
@@ -34,7 +34,7 @@ function Auth() {
             </h2>
           </div>
           <form className="form">
-            {isLogin ? (
+            {view === "login" ? (
               <>
                 <div>
                   <label>Användarnamn:</label>
