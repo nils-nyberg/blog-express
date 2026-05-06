@@ -50,7 +50,7 @@ function Auth() {
                 <input
                   className="form__submit"
                   type="submit"
-                  value={t("auth.form.submit__login")}
+                  value={t("auth.form.submitLogin")}
                 />
               </>
             ) : (
@@ -68,13 +68,13 @@ function Auth() {
                   <input className="form__text-input" type="password" />
                 </div>
                 <div>
-                  <label>{t("auth.form.repeat-password")}</label>
+                  <label>{t("auth.form.repeatPassword")}</label>
                   <input className="form__text-input" type="password" />
                 </div>
                 <input
                   className="form__submit"
                   type="submit"
-                  value={t("auth.form.submit__register")}
+                  value={t("auth.form.submitRegister")}
                 />
               </>
             )}

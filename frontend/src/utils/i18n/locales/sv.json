@@ -1,4 +1,7 @@
 {
+  "header": {
+    "changeLanguage": "EN"
+  },
   "auth": {
     "view": {
       "login": "Logga in",
@@ -7,10 +10,10 @@
     "form": {
       "username": "Användarnamn:",
       "password": "Lösenord:",
-      "repeat-password": "Upprepa lösenord:",
+      "repeatPassword": "Upprepa lösenord:",
       "email": "Email:",
-      "submit__login": "Logga in",
-      "submit__register": "Registrera"
+      "submitLogin": "Logga in",
+      "submitRegister": "Registrera"
     }
   }
 }
