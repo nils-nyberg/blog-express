@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "view": {
+      "login": "Log in",
+      "register": "Sign up"
+    },
+    "form": {
+      "username": "Username:",
+      "password": "Password:",
+      "repeat-password": "Repeat password:",
+      "email": "Email:",
+      "submit__login": "Log in",
+      "submit__register": "Sign up"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "view": {
+      "login": "Logga in",
+      "register": "Registrera dig"
+    },
+    "form": {
+      "username": "Användarnamn:",
+      "password": "Lösenord:",
+      "repeat-password": "Upprepa lösenord:",
+      "email": "Email:",
+      "submit__login": "Logga in",
+      "submit__register": "Registrera"
+    }
+  }
+}
