@@ -8,6 +8,8 @@ import Profile from "./routes/Profile";
 import Layout from "./Layout";
 import "./styles/main.css";
 
+import "./utils/i18n/i18next";
+
 const root = document.getElementById("root");
 
 createRoot(root!).render(

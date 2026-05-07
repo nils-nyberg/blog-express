@@ -1,0 +1,19 @@
+{
+  "header": {
+    "changeLanguage": "EN"
+  },
+  "auth": {
+    "view": {
+      "login": "Logga in",
+      "register": "Registrera dig"
+    },
+    "form": {
+      "username": "Användarnamn:",
+      "password": "Lösenord:",
+      "repeatPassword": "Upprepa lösenord:",
+      "email": "Email:",
+      "submitLogin": "Logga in",
+      "submitRegister": "Registrera"
+    }
+  }
+}

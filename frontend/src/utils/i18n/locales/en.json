@@ -1,0 +1,19 @@
+{
+  "header": {
+    "changeLanguage": "SV"
+  },
+  "auth": {
+    "view": {
+      "login": "Log in",
+      "register": "Sign up"
+    },
+    "form": {
+      "username": "Username:",
+      "password": "Password:",
+      "repeatPassword": "Repeat password:",
+      "email": "Email:",
+      "submitLogin": "Log in",
+      "submitRegister": "Sign up"
+    }
+  }
+}

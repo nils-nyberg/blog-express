@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Auth() {
   const [view, setView] = useState<"login" | "register">("login");
   const [loginColor, setLoginColor] = useState<string>("#d9d9d9");
   const [registerColor, setRegisterColor] = useState<string>("#b7b7b7");
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -19,7 +22,7 @@ function Auth() {
                 setRegisterColor("#b7b7b7");
               }}
             >
-              Logga in
+              {t("auth.view.login")}
             </h2>
             <h2
               className="view__register"
@@ -30,48 +33,48 @@ function Auth() {
                 setRegisterColor("#d9d9d9");
               }}
             >
-              Registrera dig
+              {t("auth.view.register")}
             </h2>
           </div>
           <form className="form">
             {view === "login" ? (
               <>
                 <div>
-                  <label>Användarnamn:</label>
+                  <label>{t("auth.form.username")}</label>
                   <input className="form__text-input" type="text" />
                 </div>
                 <div>
-                  <label>Lösenord:</label>
+                  <label>{t("auth.form.password")}</label>
                   <input className="form__text-input" type="password" />
                 </div>
                 <input
                   className="form__submit"
                   type="submit"
-                  value="Logga in"
+                  value={t("auth.form.submitLogin")}
                 />
               </>
             ) : (
               <>
                 <div>
-                  <label>E-mail:</label>
+                  <label>{t("auth.form.email")}</label>
                   <input className="form__text-input" type="email" />
                 </div>
                 <div>
-                  <label>Användarnamn:</label>
+                  <label>{t("auth.form.username")}</label>
                   <input className="form__text-input" type="text" />
                 </div>
                 <div>
-                  <label>Lösenord:</label>
+                  <label>{t("auth.form.password")}</label>
                   <input className="form__text-input" type="password" />
                 </div>
                 <div>
-                  <label>Upprepa lösenord:</label>
+                  <label>{t("auth.form.repeatPassword")}</label>
                   <input className="form__text-input" type="password" />
                 </div>
                 <input
                   className="form__submit"
                   type="submit"
-                  value="Registrera"
+                  value={t("auth.form.submitRegister")}
                 />
               </>
             )}

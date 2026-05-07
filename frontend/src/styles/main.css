@@ -44,13 +44,16 @@
   font-size: 2.25rem;
   font-weight: 400;
 }
-.header__language-icon {
+.header__language-button {
   position: absolute;
-  right: 1rem;
-  height: 40px;
-  width: 40px;
-  background-color: blue;
+  right: 1.5rem;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
+  border: 2px solid var(--text);
+  background-color: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
 }
 
 @media (width >= 1400px) {
@@ -65,10 +68,10 @@
   .header__title {
     font-size: 4rem;
   }
-  .header__language-icon {
+  .header__language-button {
+    right: 7rem;
     height: 68px;
     width: 68px;
-    right: 7rem;
   }
 }
 .auth-section {
