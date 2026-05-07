@@ -39,13 +39,15 @@ function Auth() {
           <form className="form">
             {view === "login" ? (
               <>
-                <div>
-                  <label>{t("auth.form.username")}</label>
-                  <input className="form__text-input" type="text" />
-                </div>
-                <div>
-                  <label>{t("auth.form.password")}</label>
-                  <input className="form__text-input" type="password" />
+                <div key="login">
+                  <div>
+                    <label>{t("auth.form.username")}</label>
+                    <input className="form__text-input" type="text" />
+                  </div>
+                  <div>
+                    <label>{t("auth.form.password")}</label>
+                    <input className="form__text-input" type="password" />
+                  </div>
                 </div>
                 <input
                   className="form__submit"
@@ -55,21 +57,23 @@ function Auth() {
               </>
             ) : (
               <>
-                <div>
-                  <label>{t("auth.form.email")}</label>
-                  <input className="form__text-input" type="email" />
-                </div>
-                <div>
-                  <label>{t("auth.form.username")}</label>
-                  <input className="form__text-input" type="text" />
-                </div>
-                <div>
-                  <label>{t("auth.form.password")}</label>
-                  <input className="form__text-input" type="password" />
-                </div>
-                <div>
-                  <label>{t("auth.form.repeatPassword")}</label>
-                  <input className="form__text-input" type="password" />
+                <div key="register">
+                  <div>
+                    <label>{t("auth.form.email")}</label>
+                    <input className="form__text-input" type="email" />
+                  </div>
+                  <div>
+                    <label>{t("auth.form.username")}</label>
+                    <input className="form__text-input" type="text" />
+                  </div>
+                  <div>
+                    <label>{t("auth.form.password")}</label>
+                    <input className="form__text-input" type="password" />
+                  </div>
+                  <div>
+                    <label>{t("auth.form.repeatPassword")}</label>
+                    <input className="form__text-input" type="password" />
+                  </div>
                 </div>
                 <input
                   className="form__submit"
