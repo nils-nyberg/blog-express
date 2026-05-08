@@ -1,10 +1,12 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "./assets/logo.png";
+import useWindowDimensions from "./components/WindowDimensions";
 
 function Layout() {
   const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
+  const { width } = useWindowDimensions();
 
   const isPageAuth = pathname === "/auth";
 
@@ -17,7 +19,9 @@ function Layout() {
       <header>
         <div className="header">
           <img className="header__logo" src={logo} alt="Logo" />
-          {isPageAuth && <h1 className="header__title">The Blog</h1>}
+          {(width <= 1400 || isPageAuth) && (
+            <h1 className="header__title">The Blog</h1>
+          )}
           <button
             className="header__language-button"
             onClick={handleLanguageChange}
