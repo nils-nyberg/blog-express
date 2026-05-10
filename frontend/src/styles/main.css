@@ -61,6 +61,7 @@
   justify-content: space-evenly;
   color: #f2f2f2;
   width: 100%;
+  text-decoration: none;
 }
 .header__navbar a.active {
   background-color: rgba(37, 225, 0, 0.5176470588);
