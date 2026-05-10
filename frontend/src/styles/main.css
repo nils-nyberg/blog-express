@@ -44,6 +44,28 @@
   font-size: 2.25rem;
   font-weight: 400;
 }
+.header__navbar {
+  display: flex;
+  overflow: hidden;
+  background-color: #157c00;
+  color: #fff;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  height: 85px;
+  width: 100%;
+}
+.header__navbar a {
+  display: inherit;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #f2f2f2;
+  width: 100%;
+}
+.header__navbar a.active {
+  background-color: rgba(37, 225, 0, 0.5176470588);
+  text-decoration: 2.5px underline;
+}
 .header__language-button {
   position: absolute;
   right: 1.5rem;

@@ -1,6 +1,11 @@
 {
   "header": {
-    "changeLanguage": "EN"
+    "changeLanguage": "EN",
+    "navigation": {
+      "blog": "Blogg",
+      "friends": "Vänner",
+      "profile": "Profil"
+    }
   },
   "auth": {
     "view": {
