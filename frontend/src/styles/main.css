@@ -129,6 +129,7 @@
 }
 .auth-section .view {
   display: inherit;
+  background-color: #b7b7b7;
 }
 .auth-section .view h2 {
   display: inherit;
@@ -138,6 +139,9 @@
   height: 70px;
   cursor: pointer;
   border: none;
+}
+.auth-section .view h2.active {
+  background-color: #d9d9d9;
 }
 .auth-section .form {
   display: inherit;
@@ -187,6 +191,9 @@
     margin-top: 50px;
     width: 462px;
     height: fit-content;
+  }
+  .auth-section .view {
+    border-radius: 20px 20px 0 0;
   }
   .auth-section .view__login {
     border-radius: 20px 0 0 0;
