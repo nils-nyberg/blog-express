@@ -32,7 +32,7 @@ function Layout() {
       <header>
         <div className="header">
           <img className="header__logo" src={logo} alt="Logo" />
-          {(width <= 1400 || isPageAuth) && (
+          {(width <= 900 || isPageAuth) && (
             <h1 className="header__title">The Blog</h1>
           )}
           {!isPageAuth && (
