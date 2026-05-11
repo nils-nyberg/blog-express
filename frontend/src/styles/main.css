@@ -44,6 +44,31 @@
   font-size: 2.25rem;
   font-weight: 400;
 }
+.header__navbar {
+  display: flex;
+  overflow: hidden;
+  background-color: #157c00;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  height: 85px;
+  width: 100%;
+}
+.header__navbar a {
+  display: inherit;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff;
+  width: 100%;
+  text-decoration: none;
+}
+.header__navbar a.active {
+  background-color: rgba(37, 225, 0, 0.5176470588);
+  text-decoration: 2.5px underline;
+}
+.header__navbar a:hover {
+  text-decoration: 2.5px underline;
+}
 .header__language-button {
   position: absolute;
   right: 1.5rem;
@@ -56,6 +81,24 @@
   font-size: 1.5rem;
 }
 
+@media (width >= 900px) {
+  .header__navbar {
+    position: static;
+    margin-left: 5rem;
+    background-color: #fff;
+    width: fit-content;
+  }
+  .header__navbar a {
+    margin-right: 1rem;
+    color: var(--text);
+    font-size: 1.9rem;
+    width: fit-content;
+  }
+  .header__navbar a.active {
+    background-color: #fff;
+    font-weight: 900;
+  }
+}
 @media (width >= 1400px) {
   .header {
     height: var(--header-height-desktop);
@@ -67,6 +110,9 @@
   }
   .header__title {
     font-size: 4rem;
+  }
+  .header__navbar a {
+    font-size: 2.25rem;
   }
   .header__language-button {
     right: 7rem;
@@ -86,6 +132,7 @@
 }
 .auth-section .view {
   display: inherit;
+  background-color: #b7b7b7;
 }
 .auth-section .view h2 {
   display: inherit;
@@ -95,6 +142,9 @@
   height: 70px;
   cursor: pointer;
   border: none;
+}
+.auth-section .view h2.active {
+  background-color: #d9d9d9;
 }
 .auth-section .form {
   display: inherit;
@@ -144,6 +194,9 @@
     margin-top: 50px;
     width: 462px;
     height: fit-content;
+  }
+  .auth-section .view {
+    border-radius: 20px 20px 0 0;
   }
   .auth-section .view__login {
     border-radius: 20px 0 0 0;

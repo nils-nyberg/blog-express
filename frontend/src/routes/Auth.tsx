@@ -1,40 +1,45 @@
-import { useState } from "react";
+import { useState, type HTMLAttributes } from "react";
 import { useTranslation } from "react-i18next";
+
+type Props = {
+  className: string;
+  children: string;
+} & HTMLAttributes<HTMLElement>;
 
 function Auth() {
   const [view, setView] = useState<"login" | "register">("login");
-  const [loginColor, setLoginColor] = useState<string>("#d9d9d9");
-  const [registerColor, setRegisterColor] = useState<string>("#b7b7b7");
 
   const { t } = useTranslation();
+
+  function ViewToggle({ className, children, ...props }: Props) {
+    return (
+      <h2 className={className} {...props}>
+        {children}
+      </h2>
+    );
+  }
 
   return (
     <>
       <section className="auth-section">
         <div className="auth-section__content">
           <div className="view">
-            <h2
-              className="view__login"
-              style={{ backgroundColor: loginColor }}
+            <ViewToggle
+              className={`view__login ${view === "login" ? "active" : ""}`}
               onClick={() => {
                 setView("login");
-                setLoginColor("#d9d9d9");
-                setRegisterColor("#b7b7b7");
               }}
             >
               {t("auth.view.login")}
-            </h2>
-            <h2
-              className="view__register"
-              style={{ backgroundColor: registerColor }}
+            </ViewToggle>
+            <ViewToggle
+              className={`view__register ${view === "register" ? "active" : ""}`}
               onClick={() => {
                 setView("register");
-                setLoginColor("#b7b7b7");
-                setRegisterColor("#d9d9d9");
               }}
             >
               {t("auth.view.register")}
-            </h2>
+            </ViewToggle>
           </div>
           <form className="form">
             {view === "login" ? (
