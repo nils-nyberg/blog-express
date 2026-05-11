@@ -91,7 +91,7 @@
   .header__navbar a {
     margin-right: 1rem;
     color: var(--text);
-    font-size: 2.25rem;
+    font-size: 1.9rem;
     width: fit-content;
   }
   .header__navbar a.active {
@@ -110,6 +110,9 @@
   }
   .header__title {
     font-size: 4rem;
+  }
+  .header__navbar a {
+    font-size: 2.25rem;
   }
   .header__language-button {
     right: 7rem;
