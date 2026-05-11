@@ -85,7 +85,7 @@
   .header__navbar {
     position: static;
     margin-left: 5rem;
-    background-color: #fff;
+    background-color: var(--bg);
     width: fit-content;
   }
   .header__navbar a {
@@ -95,7 +95,7 @@
     width: fit-content;
   }
   .header__navbar a.active {
-    background-color: #fff;
+    background-color: var(--bg);
     font-weight: 900;
   }
 }
