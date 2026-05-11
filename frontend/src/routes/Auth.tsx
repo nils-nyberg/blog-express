@@ -1,4 +1,4 @@
-import { useState, type HTMLAttributes } from "react";
+import { Activity, useState, type HTMLAttributes } from "react";
 import { useTranslation } from "react-i18next";
 
 type Props = {
@@ -42,51 +42,48 @@ function Auth() {
             </ViewToggle>
           </div>
           <form className="form">
-            {view === "login" ? (
-              <>
-                <div key="login">
-                  <div>
-                    <label>{t("auth.form.username")}</label>
-                    <input className="form__text-input" type="text" />
-                  </div>
-                  <div>
-                    <label>{t("auth.form.password")}</label>
-                    <input className="form__text-input" type="password" />
-                  </div>
+            <Activity mode={view === "login" ? "visible" : "hidden"}>
+              <div key="login">
+                <div>
+                  <label>{t("auth.form.username")}</label>
+                  <input className="form__text-input" type="text" />
                 </div>
-                <input
-                  className="form__submit"
-                  type="submit"
-                  value={t("auth.form.submitLogin")}
-                />
-              </>
-            ) : (
-              <>
-                <div key="register">
-                  <div>
-                    <label>{t("auth.form.email")}</label>
-                    <input className="form__text-input" type="email" />
-                  </div>
-                  <div>
-                    <label>{t("auth.form.username")}</label>
-                    <input className="form__text-input" type="text" />
-                  </div>
-                  <div>
-                    <label>{t("auth.form.password")}</label>
-                    <input className="form__text-input" type="password" />
-                  </div>
-                  <div>
-                    <label>{t("auth.form.repeatPassword")}</label>
-                    <input className="form__text-input" type="password" />
-                  </div>
+                <div>
+                  <label>{t("auth.form.password")}</label>
+                  <input className="form__text-input" type="password" />
                 </div>
-                <input
-                  className="form__submit"
-                  type="submit"
-                  value={t("auth.form.submitRegister")}
-                />
-              </>
-            )}
+              </div>
+              <input
+                className="form__submit"
+                type="submit"
+                value={t("auth.form.submitLogin")}
+              />
+            </Activity>
+            <Activity mode={view === "register" ? "visible" : "hidden"}>
+              <div key="register">
+                <div>
+                  <label>{t("auth.form.email")}</label>
+                  <input className="form__text-input" type="email" />
+                </div>
+                <div>
+                  <label>{t("auth.form.username")}</label>
+                  <input className="form__text-input" type="text" />
+                </div>
+                <div>
+                  <label>{t("auth.form.password")}</label>
+                  <input className="form__text-input" type="password" />
+                </div>
+                <div>
+                  <label>{t("auth.form.repeatPassword")}</label>
+                  <input className="form__text-input" type="password" />
+                </div>
+              </div>
+              <input
+                className="form__submit"
+                type="submit"
+                value={t("auth.form.submitRegister")}
+              />
+            </Activity>
           </form>
         </div>
       </section>
