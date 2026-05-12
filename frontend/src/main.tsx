@@ -12,17 +12,21 @@ import "./utils/i18n/i18next";
 
 const root = document.getElementById("root");
 
-createRoot(root!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Blog />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/friends" element={<Friends />} />
-          <Route path="/profile" element={<Profile />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-);
+if (root) {
+  createRoot(root).render(
+    <StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Blog />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="/friends" element={<Friends />} />
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </StrictMode>,
+  );
+} else {
+  console.error("Page could not render... root does not exist!");
+}
