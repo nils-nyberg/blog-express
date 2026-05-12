@@ -8,6 +8,16 @@ type Props = {
   children: string;
 };
 
+function CustomLink({ href, children }: Props) {
+  const { pathname } = useLocation();
+
+  return (
+    <Link to={href} className={pathname === href ? "active" : ""}>
+      {children}
+    </Link>
+  );
+}
+
 function Layout() {
   const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
@@ -16,16 +26,10 @@ function Layout() {
   const isPageAuth = pathname === "/auth";
 
   const handleLanguageChange = () => {
-    i18n.changeLanguage(t("header.changeLanguage").toLowerCase());
+    i18n
+      .changeLanguage(t("header.changeLanguage").toLowerCase())
+      .catch(console.error);
   };
-
-  function CustomLink({ href, children }: Props) {
-    return (
-      <Link to={href} className={pathname === href ? "active" : ""}>
-        {children}
-      </Link>
-    );
-  }
 
   return (
     <>

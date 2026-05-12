@@ -18,6 +18,7 @@ i18next
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-  });
+  })
+  .catch(console.error);
 
 export default i18next;

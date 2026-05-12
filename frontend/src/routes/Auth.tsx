@@ -6,18 +6,18 @@ type Props = {
   children: string;
 } & HTMLAttributes<HTMLElement>;
 
+function ViewToggle({ className, children, ...props }: Props) {
+  return (
+    <h2 className={className} {...props}>
+      {children}
+    </h2>
+  );
+}
+
 function Auth() {
   const [view, setView] = useState<"login" | "register">("login");
 
   const { t } = useTranslation();
-
-  function ViewToggle({ className, children, ...props }: Props) {
-    return (
-      <h2 className={className} {...props}>
-        {children}
-      </h2>
-    );
-  }
 
   return (
     <>
