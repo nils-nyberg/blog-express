@@ -20,5 +20,8 @@
       "submitLogin": "Logga in",
       "submitRegister": "Registrera"
     }
+  },
+  "friends": {
+    "underConstruction": "Under konstruktion"
   }
 }

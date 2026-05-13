@@ -20,5 +20,8 @@
       "submitLogin": "Log in",
       "submitRegister": "Sign up"
     }
+  },
+  "friends": {
+    "underConstruction": "Under construction"
   }
 }
