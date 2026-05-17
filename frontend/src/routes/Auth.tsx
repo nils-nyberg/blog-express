@@ -54,7 +54,7 @@ function Auth() {
                 </div>
               </div>
               <input
-                className="form__submit"
+                className="form__submit green-button"
                 type="submit"
                 value={t("auth.form.submitLogin")}
               />
@@ -79,7 +79,7 @@ function Auth() {
                 </div>
               </div>
               <input
-                className="form__submit"
+                className="form__submit green-button"
                 type="submit"
                 value={t("auth.form.submitRegister")}
               />

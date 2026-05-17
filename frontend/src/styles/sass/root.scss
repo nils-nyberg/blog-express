@@ -9,6 +9,7 @@
 :root {
 /*-------VARIABLES-------*/
   --bg: #fff;
+  --bg-green: #38ce1a;
   --text: #000;
   --header-drop-shadow: 0 4px 10px 0 rgb(0, 0, 0, 0.25);
   --header-height-mobile: 85px;
@@ -23,5 +24,22 @@
   :root {
     --bg: #3d3d3d;
     --text: #fff;
+  }
+}
+
+/* This is for making the mobile navbar not overlap the page contents */
+main {
+  padding-bottom: calc(var(--header-height-desktop) + var(--header-height-mobile));
+}
+
+.green-button {
+  background-color: var(--bg-green);
+  color: #fff;
+  cursor: pointer;
+  border: 3px solid transparent;
+
+  &:hover,
+  &:active {  
+    border-color: #38aa1a;
   }
 }

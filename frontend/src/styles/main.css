@@ -10,6 +10,7 @@
 :root {
   /*-------VARIABLES-------*/
   --bg: #fff;
+  --bg-green: #38ce1a;
   --text: #000;
   --header-drop-shadow: 0 4px 10px 0 rgb(0, 0, 0, 0.25);
   --header-height-mobile: 85px;
@@ -26,6 +27,21 @@
     --text: #fff;
   }
 }
+/* This is for making the mobile navbar not overlap the page contents */
+main {
+  padding-bottom: calc(var(--header-height-desktop) + var(--header-height-mobile));
+}
+
+.green-button {
+  background-color: var(--bg-green);
+  color: #fff;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+.green-button:hover, .green-button:active {
+  border-color: #38aa1a;
+}
+
 .header {
   position: relative;
   display: flex;
@@ -49,8 +65,9 @@
   background-color: #157c00;
   font-size: 1.5rem;
   position: fixed;
+  z-index: 1;
   bottom: 0;
-  height: 85px;
+  height: var(--header-height-mobile);
   width: 100%;
 }
 .header__navbar a {
@@ -170,19 +187,12 @@
   box-shadow: -4px 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 .auth-section .form__submit {
-  background-color: #38ce1a;
-  color: #fff;
   font-weight: 500;
-  border: none;
   border-radius: 15px;
   height: 50px;
   width: 153px;
   margin-top: 2rem;
   font-size: 1.5rem;
-  cursor: pointer;
-}
-.auth-section .form__submit:hover {
-  border: 5px solid #38aa1a;
 }
 
 @media (width >= 700px) {

@@ -55,20 +55,12 @@
     }
   
     &__submit {
-      background-color: #38ce1a;
-      color: #fff;
       font-weight: 500;
-      border: none;
       border-radius: 15px;
       height: 50px;
       width: 153px;
       margin-top: 2rem;
       font-size: 1.5rem;
-      cursor: pointer;
-  
-      &:hover {
-        border: 5px solid #38aa1a;
-      }
     }
   }
 }

@@ -25,8 +25,9 @@
     background-color: #157c00;
     font-size: 1.5rem;
     position: fixed;
+    z-index: 1;
     bottom: 0;
-    height: 85px;
+    height: var(--header-height-mobile);
     width: 100%;
 
     a{
