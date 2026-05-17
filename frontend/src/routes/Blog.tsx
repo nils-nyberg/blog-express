@@ -1,9 +1,7 @@
+import Post from "../components/blog/Post";
+
 function Blog() {
-  return (
-    <>
-      <h1>Hello Blog!</h1>
-    </>
-  );
+  return <Post />;
 }
 
 export default Blog;
