@@ -23,5 +23,11 @@
   },
   "friends": {
     "underConstruction": "Under konstruktion"
+  },
+  "blog": {
+    "post": {
+      "readMore": "Läs mer...",
+      "readLess": "Läs mindre..."
+    }
   }
 }
