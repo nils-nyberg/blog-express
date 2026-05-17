@@ -238,6 +238,7 @@ main {
 }
 .post__content {
   background-color: #d9d9d9;
+  color: #000;
   margin: 0 1rem;
   padding: 1rem;
   border-radius: 20px;
