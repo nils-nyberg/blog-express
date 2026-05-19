@@ -246,7 +246,7 @@ main {
   hyphens: auto;
 }
 .post__content-text {
-  --max-lines: 4;
+  --max-lines: 5;
   --line-height: 1.4;
   line-height: var(--line-height);
   position: relative;
